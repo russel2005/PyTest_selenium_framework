@@ -10,5 +10,5 @@ def setup():
 
 # above code should be in conftest.py
 
-def test_fixtureDemo(setup):
+def test_fixture_demo(setup):
     print("i will execute steps in fixtureDemo method")
