@@ -1,12 +1,13 @@
 import pytest
-
+from pytestDemo.BaseClass import BaseClass
 
 @pytest.mark.usefixtures("dataload")
-class TestDataDriven:
+class TestDataDriven(BaseClass):
 
-    def edit_profile(self, dataload):
-        print(dataload)
-        print(dataload[0])
+    def test_edit_profile(self, dataload):
+        log = self.get_logger()
+        log.info(dataload[0])
+        log.info(dataload[2])
         print(dataload[2])
 
 

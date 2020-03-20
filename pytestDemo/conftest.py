@@ -11,6 +11,12 @@ def setup():
     print("i will executed last")
 
 
+@pytest.fixture()
 def dataload():
     print("user profile data is being created.")
     return ['arish', 'islam', 'arish@gmail.com']
+
+
+@pytest.fixture(params=["chrome", "firefox", "IE"])
+def cross_browser(request):
+    return request.param
